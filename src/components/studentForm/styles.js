@@ -14,6 +14,10 @@ export default makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     width: '100%',
+    width: 500,
+  },
+  formNext: {
+    width: 500,
   },
   formGroup: {
     width: '100%',
@@ -31,6 +35,10 @@ export default makeStyles((theme) => ({
   },
   stepForm: {
     display: 'none',
+  },
+  form2Footer: {
+    display: 'flex',
+    flexDirection: 'row',
   },
   formActive: {
     display: 'flex',
@@ -53,5 +61,11 @@ export default makeStyles((theme) => ({
   cancelBtn: {
     background: '#f2f2f2',
     color: '#000',
+  },
+  formSubmitBtn: {
+    background: 'red',
+    color: '#ffffff',
+    marginLeft: '23%',
+    padding: '1em 1.5em',
   },
 }));

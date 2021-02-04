@@ -54,7 +54,7 @@ const Index = () => {
         <Typography variant="h4" component="h1" gutterBottom>
           Kwes and next js form modal
         </Typography>
-       
+
         <button type="button" onClick={() => setOpenForm(true)}>
           Open Modal
         </button>

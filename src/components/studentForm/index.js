@@ -13,16 +13,6 @@ export default function Home() {
 
   useEffect(() => {
     kwesforms.init();
-
-    // kwesforms.setCustomRule(
-    //   "fivertest",
-    //   "date",
-    //   "Please, not on the weekend",
-    //   (value) => {
-    //     const date = new Date(value);
-    //     return date.getDay() === 0 || date.getDay() === 6;
-    //   }
-    // );
   }, []);
 
   return (
@@ -87,7 +77,7 @@ export default function Home() {
         </div>
 
         <div className={`kw-form-step ${formStep === 2 ? 'active' : ''}`}>
-          <Grid container spacing={1} className={classes.form}>
+          <Grid container spacing={1} className={classes.formNext}>
             <Grid item lg={6} md={6} xs={12}>
               <div className={classes.formGroup}>
                 <label className={classes.formLabelMini} htmlFor="firstName">
@@ -123,7 +113,7 @@ export default function Home() {
             <Grid item lg={12} xs={12}>
               <div className={classes.formGroup}>
                 <label className={classes.formLabelMini} htmlFor="phone">
-                  City of Residence
+                  Phone
                 </label>
                 <input type="text" name="phone" data-kw-rules="required" />
               </div>
@@ -133,32 +123,27 @@ export default function Home() {
                 <label className={classes.formLabelMini} htmlFor="email">
                   Email
                 </label>
-                <input type="email" name="email" data-kw-rules="required|email"  />
+                <input
+                  type="email"
+                  name="email"
+                  data-kw-rules="required|email"
+                />
               </div>
             </Grid>
-            <Grid item lg={12} xs={12}>
-            <button
-            className="kw-multistep-button kw-multistep-button-previous"
-            type="button"
-            onClick={() => setFormStep(1)}
-          >
-            Back
-          </button>
-          <button type="submit">Submit</button>
+            <Grid item lg={12} xs={12} className={classes.form2Footer}>
+              <a
+                onClick={(e) => {
+                  e.preventDefault;
+                  setFormStep(1);
+                }}
+              >
+                {'<- Back'}
+              </a>
+              <button type="submit" className={classes.formSubmitBtn}>
+                Send Message Now
+              </button>
             </Grid>
           </Grid>
-
-          {/* <div className="kw-datepicker-wrapper">
-            <label htmlFor="date">Date</label>
-            <input
-              type="text"
-              name="date"
-              data-kw-type="datepicker"
-              data-kw-rules="required"
-              autoComplete="off"
-            />
-          </div> */}
-         
         </div>
       </form>
     </main>
