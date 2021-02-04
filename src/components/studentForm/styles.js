@@ -14,10 +14,17 @@ export default makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     width: '100%',
-    width: 500,
+    minWidth: 500,
+    [theme.breakpoints.down('sm')]: {
+      minWidth: '80vw',
+    },
   },
   formNext: {
-    width: 500,
+    minWidth: 500,
+    maxWidth: 500,
+    [theme.breakpoints.down('sm')]: {
+      minWidth: '80vw',
+    },
   },
   formGroup: {
     width: '100%',
@@ -67,5 +74,12 @@ export default makeStyles((theme) => ({
     color: '#ffffff',
     marginLeft: '23%',
     padding: '1em 1.5em',
+  },
+  backBtn: {
+    textDecoration: 'none',
+
+    '&:hover': {
+      cursor: 'pointer',
+    },
   },
 }));

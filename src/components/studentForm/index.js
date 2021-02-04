@@ -113,7 +113,7 @@ export default function Home() {
             <Grid item lg={12} xs={12}>
               <div className={classes.formGroup}>
                 <label className={classes.formLabelMini} htmlFor="phone">
-                  Phone
+                  Phone number
                 </label>
                 <input type="text" name="phone" data-kw-rules="required" />
               </div>
@@ -121,7 +121,7 @@ export default function Home() {
             <Grid item lg={12} xs={12}>
               <div className={classes.formGroup}>
                 <label className={classes.formLabelMini} htmlFor="email">
-                  Email
+                  Email address
                 </label>
                 <input
                   type="email"
@@ -136,6 +136,7 @@ export default function Home() {
                   e.preventDefault;
                   setFormStep(1);
                 }}
+                className={classes.backBtn}
               >
                 {'<- Back'}
               </a>
