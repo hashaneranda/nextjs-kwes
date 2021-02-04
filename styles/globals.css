@@ -1,0 +1,69 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+form > div {
+  padding: 0.5rem 0;
+}
+
+.kw-form-step {
+  display: none;
+}
+
+.kw-form-step.active {
+  display: flex;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+select {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+button {
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+/* .kw-form-step  input{
+  width: 100%;
+} */
+
+.kw-multistep-footer .kw-multistep-button-previous {
+  float: left;
+}
+
+.kw-multistep-footer .kw-multistep-button-next,
+.kw-multistep-footer .kw-multistep-button-submit {
+  float: right;
+}

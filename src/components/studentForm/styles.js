@@ -1,0 +1,57 @@
+import { makeStyles } from '@material-ui/styles';
+
+export default makeStyles((theme) => ({
+  root: {
+    display: 'grid',
+    placeItems: 'center',
+    minWidth: 400,
+    padding: '0 2em',
+    paddingBottom: '1.5em',
+  },
+  form: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+  },
+  formGroup: {
+    width: '100%',
+    marginBottom: 15,
+  },
+  formLabel: {
+    fontWeight: '500',
+    fontSize: '1.2em',
+    paddingBottom: 9,
+  },
+  formLabelMini: {
+    fontWeight: '500',
+    fontSize: '1.1em',
+    paddingBottom: 9,
+  },
+  stepForm: {
+    display: 'none',
+  },
+  formActive: {
+    display: 'flex',
+  },
+  footer: {
+    display: 'flex',
+    flexDirection: 'row-reverse',
+    alignItems: 'center',
+    width: '100%',
+    marginTop: 25,
+  },
+  actionBtn: {
+    padding: '1em 1.5em',
+    marginLeft: 10,
+  },
+  nextBtn: {
+    background: 'red',
+    color: '#ffffff',
+  },
+  cancelBtn: {
+    background: '#f2f2f2',
+    color: '#000',
+  },
+}));
