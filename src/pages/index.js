@@ -5,8 +5,6 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import { makeStyles } from '@material-ui/core/styles';
 
-import ProTip from '../components/pro-tip';
-import Link from '../components/link';
 import Copyright from '../components/copyright';
 import Modal from '../components/modal';
 import StudentForm from '../components/studentForm';

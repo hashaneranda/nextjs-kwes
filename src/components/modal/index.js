@@ -1,7 +1,6 @@
 import React from 'react';
 import { Modal, Paper, Grow } from '@material-ui/core';
 import PropTypes from 'prop-types';
-import Image from 'next/image';
 
 // assets
 import { close } from '../../constants/images';

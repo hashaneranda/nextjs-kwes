@@ -12,11 +12,29 @@ import useStyles from './styles';
 export default function Home() {
   const classes = useStyles();
 
+  const [country, setCountry] = useState('');
+  const [countryCode, setCountryCode] = useState('');
+  const [city, setCity] = useState('');
+
   const [formStep, setFormStep] = useState(1);
 
   useEffect(() => {
     kwesforms.init();
+    geoFindMe();
   }, []);
+
+  function geoFindMe() {
+    fetch('https://extreme-ip-lookup.com/json/')
+      .then((res) => res.json())
+      .then((response) => {
+        setCountry(response.country);
+        setCountryCode(response.countryCode.toLowerCase());
+        setCity(response.city);
+      })
+      .catch(() => {
+        console.log('Request failed');
+      });
+  }
 
   return (
     <main className={classes.root}>
@@ -102,7 +120,11 @@ export default function Home() {
                 <label className={classes.formLabelMini} htmlFor="nationality">
                   Nationality
                 </label>
-                <select kw-select-type="countries" name="nationality"></select>
+                <select
+                  kw-select-type="countries"
+                  name="nationality"
+                  value={country}
+                ></select>
               </div>
             </Grid>
             <Grid item lg={6} md={6} xs={12}>
@@ -110,7 +132,12 @@ export default function Home() {
                 <label className={classes.formLabelMini} htmlFor="city">
                   City of Residence
                 </label>
-                <input type="text" name="city" data-kw-rules="required" />
+                <input
+                  type="text"
+                  name="city"
+                  value={city}
+                  data-kw-rules="required"
+                />
               </div>
             </Grid>
             <Grid item lg={12} xs={12}>
@@ -119,7 +146,7 @@ export default function Home() {
                   Phone number
                 </label>
                 <PhoneInput
-                  country="us"
+                  country={countryCode}
                   inputProps={{
                     name: 'phone',
                     required: true,
