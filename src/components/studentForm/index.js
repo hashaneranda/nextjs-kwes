@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import kwesforms from 'kwesforms';
 import classNames from 'classnames';
+import PhoneInput from 'react-phone-input-2';
 import Grid from '@material-ui/core/Grid';
+
+import 'react-phone-input-2/lib/style.css';
 
 //styles
 import useStyles from './styles';
@@ -115,7 +118,15 @@ export default function Home() {
                 <label className={classes.formLabelMini} htmlFor="phone">
                   Phone number
                 </label>
-                <input type="text" name="phone" data-kw-rules="required" />
+                <PhoneInput
+                  country="us"
+                  inputProps={{
+                    name: 'phone',
+                    required: true,
+                    autoFocus: true,
+                  }}
+                  data-kw-rules="required"
+                />
               </div>
             </Grid>
             <Grid item lg={12} xs={12}>
