@@ -144,7 +144,6 @@ export default function Home() {
                   fieldName="phone"
                   separateDialCode
                   format
-                  // ="required"
                   telInputProps={{ 'data-kw-rules': 'required' }}
                 />
               </div>
