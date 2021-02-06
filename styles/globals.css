@@ -37,7 +37,22 @@ input {
   padding: 0.5rem;
 }
 
-.react-tel-input .flag-dropdown {
+.intl-tel-input {
+  width: 100%;
+}
+
+.intl-tel-input input,
+.intl-tel-input input[type='text'],
+.intl-tel-input input[type='tel'] {
+  height: 35px;
+}
+
+.intl-tel-input.allow-dropdown.separate-dial-code .selected-dial-code {
+  padding-left: 7px !important;
+}
+
+.intl-tel-input.allow-dropdown.separate-dial-code .selected-flag {
+  display: flex !important;
   height: 35px;
 }
 

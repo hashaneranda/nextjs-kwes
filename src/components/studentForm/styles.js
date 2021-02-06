@@ -46,6 +46,7 @@ export default makeStyles((theme) => ({
   form2Footer: {
     display: 'flex',
     flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   formActive: {
     display: 'flex',
@@ -72,7 +73,7 @@ export default makeStyles((theme) => ({
   formSubmitBtn: {
     background: 'red',
     color: '#ffffff',
-    marginLeft: '23%',
+    marginLeft: '-10%',
     padding: '1em 1.5em',
   },
   backBtn: {

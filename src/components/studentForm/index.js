@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import kwesforms from 'kwesforms';
 import classNames from 'classnames';
-import PhoneInput from 'react-phone-input-2';
 import Grid from '@material-ui/core/Grid';
-
-import 'react-phone-input-2/lib/style.css';
+import IntlTelInput from 'react-intl-tel-input';
+import 'react-intl-tel-input/dist/main.css';
 
 //styles
 import useStyles from './styles';
@@ -139,14 +138,14 @@ export default function Home() {
                 <label className={classes.formLabelMini} htmlFor="phone">
                   Phone number
                 </label>
-                <PhoneInput
-                  country={countryCode}
-                  inputProps={{
-                    name: 'phone',
-                    required: true,
-                    autoFocus: true,
-                  }}
-                  data-kw-rules="required"
+
+                <IntlTelInput
+                  defaultCountry={countryCode}
+                  fieldName="phone"
+                  separateDialCode
+                  format
+                  // ="required"
+                  telInputProps={{ 'data-kw-rules': 'required' }}
                 />
               </div>
             </Grid>
@@ -175,6 +174,7 @@ export default function Home() {
               <button type="submit" className={classes.formSubmitBtn}>
                 Send Message Now
               </button>
+              <div></div>
             </Grid>
           </Grid>
         </div>
