@@ -48,7 +48,7 @@ input {
 }
 
 .intl-tel-input .country-list {
-  z-index: 10;
+  z-index: 10 !important;
 }
 
 .intl-tel-input.allow-dropdown.separate-dial-code .selected-dial-code {
