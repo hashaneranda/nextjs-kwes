@@ -14,7 +14,6 @@ export default function Home() {
 
   const [country, setCountry] = useState('');
   const [countryCode, setCountryCode] = useState('');
-  const [city, setCity] = useState('');
 
   const [formStep, setFormStep] = useState(1);
 
@@ -29,7 +28,6 @@ export default function Home() {
       .then((response) => {
         setCountry(response.country);
         setCountryCode(response.countryCode.toLowerCase());
-        setCity(response.city);
       })
       .catch(() => {
         console.log('Request failed');
@@ -124,6 +122,7 @@ export default function Home() {
                   kw-select-type="countries"
                   name="nationality"
                   value={country}
+                  onChange={(e) => setCountry(e.target.value)}
                 ></select>
               </div>
             </Grid>
@@ -132,12 +131,7 @@ export default function Home() {
                 <label className={classes.formLabelMini} htmlFor="city">
                   City of Residence
                 </label>
-                <input
-                  type="text"
-                  name="city"
-                  value={city}
-                  data-kw-rules="required"
-                />
+                <input type="text" name="city" data-kw-rules="required" />
               </div>
             </Grid>
             <Grid item lg={12} xs={12}>
