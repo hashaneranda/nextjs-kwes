@@ -47,8 +47,12 @@ input {
   height: 35px;
 }
 
+.intl-tel-input.iti-container {
+  z-index: 1301 !important;
+}
+
 .intl-tel-input .country-list {
-  z-index: 10 !important;
+  z-index: 1301 !important;
 }
 
 .intl-tel-input.allow-dropdown.separate-dial-code .selected-dial-code {
