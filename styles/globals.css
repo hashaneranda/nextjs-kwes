@@ -47,6 +47,10 @@ input {
   height: 35px;
 }
 
+.intl-tel-input .country-list {
+  z-index: 10;
+}
+
 .intl-tel-input.allow-dropdown.separate-dial-code .selected-dial-code {
   padding-left: 7px !important;
 }
